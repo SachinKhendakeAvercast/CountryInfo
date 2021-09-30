@@ -26,7 +26,7 @@ public class MTService {
 
 	public String getAppInfo() {
 
-		String appInfo = "Contry Info App";
+		String appInfo = "Country Info App.";
 
 		return appInfo;
 	}
