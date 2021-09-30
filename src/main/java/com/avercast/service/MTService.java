@@ -24,4 +24,11 @@ public class MTService {
 		return map;
 	}
 
+	public String getAppInfo() {
+
+		String appInfo = "Contry Info App";
+
+		return appInfo;
+	}
+
 }
