@@ -1,4 +1,4 @@
-FROM openjdk:latest
+FROM openjdk:11
 COPY /target/CountryInfo-0.0.1-SNAPSHOT.jar /
 EXPOSE 5000
 WORKDIR /
