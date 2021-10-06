@@ -26,6 +26,5 @@ public class MTController {
 	public String AppInfo() {
 		return mtService.getAppInfo();
 		
-		
 	}
 }
