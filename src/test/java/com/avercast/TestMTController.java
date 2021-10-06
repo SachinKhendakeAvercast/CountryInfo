@@ -3,20 +3,28 @@ package com.avercast;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.avercast.controller.MTController;
+import com.avercast.service.MTService;
 
 class TestMTController {
 
-	MTController obj = new MTController();
+	@Autowired
+	MTService mtService;
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	public void GetAppInfo() {
+		assertEquals("Country Info App.", mtService.getAppInfo());
 	}
-
+	
 	@Test
-	public void testSum() {
-		assertEquals(25, obj.sum(10, 15));
+	public void GetCountryCode() {
+		assertEquals("Country Info App.", mtService.getCountryCode());
+	}
+	
+	@Test
+	public void GetCountryCodeFail() {
+		fail("Fail to fetch country code");
 	}
 }
