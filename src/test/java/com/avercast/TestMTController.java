@@ -41,7 +41,6 @@ class TestMTController {
 			return false;
 		} else {
 			return true;
-
 		}
 
 	}
