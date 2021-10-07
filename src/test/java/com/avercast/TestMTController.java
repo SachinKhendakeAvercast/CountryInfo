@@ -17,32 +17,33 @@ class TestMTController {
 	public void GetAppInfo() {
 		assertEquals("Country Info App.", mtService.getAppInfo().toString());
 	}
-	
+
 	@Test
 	public void GetCountryCode() {
 		assertEquals("Country Info App.", mtService.getCountryCode());
 	}
-	
+
 	@Test
 	public void GetCountryCodeFail() {
 		fail("Fail to fetch country code");
 	}
-	
+
 	@Test
 	public void ChangeCostWithBlankMpass() {
-		// setup
-        String password = "";
- 
-        // execute
-        boolean actual = validatePassword(password);
- 
-        // assert
-        assertFalse(actual); 
+		String password = "";
+		boolean actual = validatePassword(password);
+		System.out.println("actual = " + actual);
+		assertFalse(actual);
 	}
-	
+
 	public static boolean validatePassword(String password) {
-		  return true;
+		if (password == null || password.isEmpty()) {
+			return false;
+		} else {
+			return true;
+
 		}
-	
-	
+
+	}
+
 }
