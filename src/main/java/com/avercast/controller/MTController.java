@@ -27,4 +27,10 @@ public class MTController {
 		return mtService.getAppInfo();
 		
 	}
+
+	@GetMapping("/getAppInfo")
+	public String getAppInfo() {
+		return mtService.getAppInfo();
+		
+	}
 }
